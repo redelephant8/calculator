@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html name="background" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,49 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body class="body">
     <div class="main">
-    <div class="screenContainer">
-    <p class="miniScreen"></p>
-    <p class="screen"></p>
-    </div>
-    <div>
-        <button onclick="display(1)">1</button>
-        <button onclick="display(2)">2</button>
-        <button onclick="display(3)">3</button>
-        <button onclick="display(4)">4</button>
-        <button onclick="display(5)">5</button>
-        <button onclick="display(6)">6</button>
-        <button onclick="display(7)">7</button>
-        <button onclick="display(8)">8</button>
-        <button onclick="display(9)">9</button>
-        <button onclick="display(0)">0</button>
-        <button onclick="operator('+')">+</button>
-        <button onclick="operator('-')">-</button>
-        <button onclick="operator('*')">*</button>
-        <button onclick="operator('/')">/</button>
-        <button onclick="display('.')">.</button>
-        <button onclick="equal('regular')">=</button>
-        <button onclick="clearCalc()">Clear</button>
-        <button onclick="deleteCalc()">Backspace</button>
+        <h1>Calculator</h1>
+        <div class="color-menu">
+            <p>Colors:</p>
+            <button class="pink">Pink</button>
+            <button class="blue">Blue</button>
+            <button class="green">Green</button>
+        </div>
+        <div class="calculatorContainer">
+            <div name='c-screen' class="screenContainer">
+                <p class="miniScreen">‎</p>
+                <p class="screen"></p>
+            </div>
+            <div class="calculator">
+                <button name="c-clear" onclick="clearCalc()">AC</button>
+                <button onclick="display('+')" name="c-operator">+/-</button>
+                <button name="c-operator"><span class="material-icons">percent</span></button>
+                <button name="c-operator" onclick="operator('/')">/</button>
+                <button name="c-number" onclick="display(7)">7</button>
+                <button name="c-number" onclick="display(8)">8</button>
+                <button name="c-number" onclick="display(9)">9</button>
+                <button name="c-operator" onclick="operator('*')">*</button>
+                <button name="c-number" onclick="display(4)">4</button>
+                <button name="c-number" onclick="display(5)">5</button>
+                <button name="c-number" onclick="display(6)">6</button>
+                <button name="c-operator" onclick="operator('-')">-</button>
+                <button name="c-number" onclick="display(3)">3</button>
+                <button name="c-number" onclick="display(2)">2</button>
+                <button name="c-number" onclick="display(1)">1</button>
+                <button name="c-operator" onclick="operator('+')">+</button>
+                <button name="c-number" onclick="display(0)">0</button>
+                <button name="c-number" class="operator" id="point" onclick="display('.')">.</button>
+                <button name="c-number" onclick="deleteCalc()"><span class="material-icons">backspace</span></button>
+                <button name="c-equal" onclick="equal()">=</button>
+            </div>
+        </div>
     </div>
     </div>
 </body>
+
 </html>
