@@ -1,7 +1,10 @@
 html {
   background-color: lightblue;
   transition: all 0.2s ease;
+  position: relative;
+  min-height: 100%;
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -14,9 +17,13 @@ html {
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 450px;
   width: 500px;
   margin-top: 40px;
+}
+
+.calculator button {
+  margin: 5px;
 }
 
 .calculatorContainer {
@@ -98,7 +105,7 @@ button:hover {
   font-size: 25px;
 }
 
-.c-clear {
+#c-clear {
   background-color: #c5edd2;
 }
 
@@ -112,4 +119,18 @@ button:hover {
 
 #c-equal {
   background-color: #d0e2fc;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 20px;
+  font-family: "Quicksand";
 }

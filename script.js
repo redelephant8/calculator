@@ -13,8 +13,6 @@ const cScreen = document.getElementsByName('c-screen');
 const cBackground = document.getElementsByName('background');
 const cCalcBackground = document.getElementsByName('calcBackground');
 const colorButtons = document.getElementsByName('colorButton');
-const numberBtns = document.querySelectorAll('[data-num]');
-const operatorBtns = document.querySelectorAll('c-operator');
 
 // let screenValue;
 let num1 = 0;
@@ -27,9 +25,7 @@ let restart = false;
 
 //Event Listener for Keyboard
 window.addEventListener('keypress', handleKeyboard);
-numberBtns.forEach((button) =>
-  button.addEventListener('click', () => display(button.textContent))
-)
+
 
 //Function for deciding which operation to do 
 function operate(operator, a, b) {
@@ -79,12 +75,14 @@ function display(num) {
         } else {
             screen.textContent += num;
         }
+    blur();
     // screenValue = screen.textContent;
     }
 
     //Displays the inputted operator 
 function operator(mathType) {
     //Special display if a second operator is inputted
+    blur();
     if (operation != null) {
         equal();
     }
@@ -114,6 +112,7 @@ function equal() {
     operation = null;
     restart = true;
     screen.textContent = total;
+    blur();
 }
 
 //Resets the calculator
@@ -126,7 +125,6 @@ function clearCalc() {
     timesPlus = 0;
     screen.textContent = '';
     miniScreen.textContent = '‎';
-    // screenValue = '';
 }
 
 //Deletes the most recent input to the calculator
@@ -145,18 +143,7 @@ function calc() {
 
 //Handles keyboard input events
 function handleKeyboard(e) {
-      for (let i = 0, max = cEqual.length; i < max; i++) {
-          cEqual[i].blur();
-    };
-     for (let i = 0, max = cNumber.length; i < max; i++) {
-          cNumber[i].blur();
-    };
-     for (let i = 0, max = cOperator.length; i < max; i++) {
-          cOperator[i].blur();
-    };
-     for (let i = 0, max = cClear.length; i < max; i++) {
-          cClear[i].blur();
-    };
+    blur();
     if (e.key >= 0 && e.key <= 9 || e.key == ".") display(e.key);
     if (e.key === 'Backspace') deleteCalc();
     if (e.key == 'Enter') equal();
@@ -182,6 +169,21 @@ function divide(a, b) {
 
 function percentage(a, b) {
     return (a / 100) * b;
+}
+
+function blur() {
+    for (let i = 0, max = cEqual.length; i < max; i++) {
+          cEqual[i].blur();
+    };
+     for (let i = 0, max = cNumber.length; i < max; i++) {
+          cNumber[i].blur();
+    };
+     for (let i = 0, max = cOperator.length; i < max; i++) {
+          cOperator[i].blur();
+    };
+     for (let i = 0, max = cClear.length; i < max; i++) {
+          cClear[i].blur();
+    };
 }
    
 
