@@ -17,39 +17,43 @@
         <h1>Calculator</h1>
         <div class="color-menu">
             <p>Colors:</p>
-            <button class="pink">Pink</button>
-            <button class="blue">Blue</button>
-            <button class="green">Green</button>
+            <button name="colorButton" class="pink">Pink</button>
+            <button name="colorButton" class="blue">Blue</button>
+            <button name="colorButton" class="green">Green</button>
+            <button name="colorButton" class="yellow">Yellow</button>
         </div>
-        <div class="calculatorContainer">
+        <div name="calcBackground" class="calculatorContainer">
             <div name='c-screen' class="screenContainer">
                 <p class="miniScreen">‎</p>
                 <p class="screen"></p>
             </div>
             <div class="calculator">
-                <button name="c-clear" onclick="clearCalc()">AC</button>
-                <button onclick="display('+')" name="c-operator">+/-</button>
-                <button name="c-operator"><span class="material-icons">percent</span></button>
-                <button name="c-operator" onclick="operator('/')">/</button>
-                <button name="c-number" onclick="display(7)">7</button>
-                <button name="c-number" onclick="display(8)">8</button>
-                <button name="c-number" onclick="display(9)">9</button>
-                <button name="c-operator" onclick="operator('*')">*</button>
-                <button name="c-number" onclick="display(4)">4</button>
-                <button name="c-number" onclick="display(5)">5</button>
-                <button name="c-number" onclick="display(6)">6</button>
-                <button name="c-operator" onclick="operator('-')">-</button>
-                <button name="c-number" onclick="display(3)">3</button>
-                <button name="c-number" onclick="display(2)">2</button>
-                <button name="c-number" onclick="display(1)">1</button>
-                <button name="c-operator" onclick="operator('+')">+</button>
-                <button name="c-number" onclick="display(0)">0</button>
-                <button name="c-number" class="operator" id="point" onclick="display('.')">.</button>
-                <button name="c-number" onclick="deleteCalc()"><span class="material-icons">backspace</span></button>
-                <button name="c-equal" onclick="equal()">=</button>
+                <button id="c-clear" name="c-clear" onclick="clearCalc()">AC</button>
+                <button class="c-operator" onclick="display('+/-')" name="c-operator">+/-</button>
+                <button data-operator class="c-operator" name="c-operator" onclick="operator('%')"><span
+                        class="material-icons">percent</span></button>
+                <button data-operator class="c-operator" name="c-operator" onclick="operator('/')">/</button>
+                <button data-num class="c-number" name="c-number" >7</button>
+                <button data-num class="c-number" name="c-number">8</button>
+                <button data-num class="c-number" name="c-number">9</button>
+                <button data-operator class="c-operator" name="c-operator" onclick="operator('*')">*</button>
+                <button data-num class="c-number" name="c-number">4</button>
+                <button data-num class="c-number" name="c-number">5</button>
+                <button data-num class="c-number" name="c-number">6</button>
+                <button data-operator class="c-operator" name="c-operator" onclick="operator('-')">-</button>
+                <button data-num class="c-number" name="c-number">3</button>
+                <button data-num class="c-number" name="c-number">2</button>
+                <button data-num class="c-number" name="c-number">1</button>
+                <button data-operator class="c-operator" name="c-operator" onclick="operator('+')">+</button>
+                <button data-num class="c-number" name="c-number">0</button>
+                <button data-num class="c-number" name="c-number" class="operator" id="point" onclick="display('.')">.</button>
+                <button data-num class="c-number" name="c-number" onclick="deleteCalc()"><span
+                        class="material-icons">backspace</span></button>
+                <button class="c-equal" id="c-equal" onclick="equal()">=</button>
             </div>
         </div>
     </div>
+    <footer>Copyright </footer>
     </div>
 </body>
 

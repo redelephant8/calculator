@@ -1,5 +1,5 @@
 html {
-  background-color: #dab8c9;
+  background-color: lightblue;
   transition: all 0.2s ease;
 }
 .main {
@@ -16,7 +16,7 @@ html {
   justify-content: center;
   height: 500px;
   width: 500px;
-  margin: 50px;
+  margin-top: 40px;
 }
 
 .calculatorContainer {
@@ -26,13 +26,14 @@ html {
   align-items: center;
   padding: 35px;
   border-radius: 10px;
-  background-color: #41333a;
+  background-color: #6d9ecc;
+  transition: all 0.2s ease;
 }
 
 .screenContainer {
   background-color: lightblue;
   border-radius: 10px;
-  height: 150px;
+  height: 155px;
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -56,6 +57,11 @@ p {
   margin: 20px 0;
 }
 
+h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
 button {
   display: flex;
   justify-self: center;
@@ -64,7 +70,7 @@ button {
   border-radius: 50%;
   width: 75px;
   height: 75px;
-  padding: 20px;
+  padding: 40px;
   border: none;
   transition: all 0.2s ease;
   font-size: 30px;
@@ -90,4 +96,20 @@ button:hover {
 
 .color-menu p {
   font-size: 25px;
+}
+
+.c-clear {
+  background-color: #c5edd2;
+}
+
+.c-number {
+  background-color: #ebecf0;
+}
+
+.c-operator {
+  background-color: #bee8fc;
+}
+
+#c-equal {
+  background-color: #d0e2fc;
 }
