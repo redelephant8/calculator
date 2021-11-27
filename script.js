@@ -14,7 +14,6 @@ const cBackground = document.getElementsByName('background');
 const cCalcBackground = document.getElementsByName('calcBackground');
 const colorButtons = document.getElementsByName('colorButton');
 
-// let screenValue;
 let num1 = 0;
 let num2 = 0;
 let total;
@@ -76,7 +75,6 @@ function display(num) {
             screen.textContent += num;
         }
     blur();
-    // screenValue = screen.textContent;
     }
 
     //Displays the inputted operator 
@@ -101,9 +99,6 @@ function equal() {
     if (!num1 && !num2) {
         total = 0;
         miniScreen.textContent = '‎';
-    // } else if (!num1 && num2) {
-    //     total = num2;
-    //     miniScreen.textContent = '‎';
     } else {
         total = (operate(operation, num1, num2));
     }
